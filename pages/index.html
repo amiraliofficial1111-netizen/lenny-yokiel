@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="preload" as="image" href="../assets/hero-bg.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="../assets/hero-book.webp?v=4" fetchpriority="high">
 </head>
 <body>
   <header class="site-header">
@@ -95,23 +97,14 @@
           </div>
         </div>
         <div class="still">
-          <img class="stump" src="../assets/stump.png" alt="">
+          <img class="stump" src="../assets/stump.webp" alt="" width="992" height="632" decoding="async">
           <div class="book-slot">
-            <a class="book" href="book.html" aria-label="Carrie and the Whisper of the Rose by Lenny Yokiel">
-              <span class="book-spine"></span>
-              <span class="book-face">
-                <img src="../assets/book-art.jpg" alt="">
-                <span class="book-title">
-                  <span class="bt-1">Carrie</span>
-                  <span class="bt-2">and the Whisper of the</span>
-                  <span class="bt-3">Rose</span>
-                </span>
-                <span class="bt-author">Lenny Yokiel</span>
-              </span>
+            <a href="book.html" aria-label="Carrie and the Whisper of the Rose by Lenny Yokiel">
+              <img class="hero-book" src="../assets/hero-book.webp?v=4" alt="" width="639" height="854" decoding="async" fetchpriority="high">
             </a>
           </div>
-          <img class="hero-roses" src="../assets/roses.png" alt="">
-          <img class="basket" src="../assets/basket.png" alt="">
+          <img class="hero-roses" src="../assets/roses.webp" alt="" width="500" height="481" decoding="async">
+          <img class="basket" src="../assets/basket.webp" alt="" width="640" height="754" decoding="async">
         </div>
       </div>
     </section>
@@ -153,12 +146,12 @@
 
           <div class="explore-grid">
             <div class="explore-book">
-              <img class="explore-roses" src="../assets/roses.png" alt="">
+              <img class="explore-roses" src="../assets/roses.webp" alt="" width="500" height="481" decoding="async" loading="lazy">
               <div class="book-slot">
                 <a class="book" href="book.html" aria-label="Carrie and the Whisper of the Rose">
                   <span class="book-spine"></span>
                   <span class="book-face">
-                    <img src="../assets/book-art.jpg" alt="">
+                    <img src="../assets/book-art.webp" alt="" width="700" height="933" decoding="async" loading="lazy">
                     <span class="book-title">
                       <span class="bt-1">Carrie</span>
                       <span class="bt-2">and the Whisper of the</span>
@@ -179,7 +172,7 @@
                   <a class="book" href="hardcover.html" tabindex="-1" aria-hidden="true">
                     <span class="book-spine"></span>
                     <span class="book-face">
-                      <img src="../assets/book-art.jpg" alt="">
+                      <img src="../assets/book-art.webp" alt="" width="700" height="933" decoding="async" loading="lazy">
                       <span class="book-title"><span class="bt-1">Carrie</span><span class="bt-2">and the Whisper of the</span><span class="bt-3">Rose</span></span>
                       <span class="bt-author">Lenny Yokiel</span>
                     </span>
@@ -196,7 +189,7 @@
                   <a class="book" href="paperback.html" tabindex="-1" aria-hidden="true">
                     <span class="book-spine"></span>
                     <span class="book-face">
-                      <img src="../assets/book-art.jpg" alt="">
+                      <img src="../assets/book-art.webp" alt="" width="700" height="933" decoding="async" loading="lazy">
                       <span class="book-title"><span class="bt-1">Carrie</span><span class="bt-2">and the Whisper of the</span><span class="bt-3">Rose</span></span>
                       <span class="bt-author">Lenny Yokiel</span>
                     </span>
@@ -213,7 +206,7 @@
                   <a class="book flat" href="ebook.html" tabindex="-1" aria-hidden="true">
                     <span class="book-spine"></span>
                     <span class="book-face">
-                      <img src="../assets/book-art.jpg" alt="">
+                      <img src="../assets/book-art.webp" alt="" width="700" height="933" decoding="async" loading="lazy">
                       <span class="book-title"><span class="bt-1">Carrie</span><span class="bt-2">and the Whisper of the</span><span class="bt-3">Rose</span></span>
                       <span class="bt-author">Lenny Yokiel</span>
                     </span>
@@ -282,7 +275,7 @@
 
     <section class="beyond">
       <div class="wrap beyond-stage">
-        <img class="jar" src="../assets/jar.jpg" alt="White daisies in a jar resting on a stack of books">
+        <img class="jar" src="../assets/jar.webp" alt="White daisies in a jar resting on a stack of books" width="560" height="747" decoding="async" loading="lazy">
         <div class="card-row">
           <a class="link-card" href="art.html">
             <svg viewBox="0 0 24 24" fill="none" stroke="#2d6810" stroke-width="1.7" aria-hidden="true"><path d="M4 8h3l2-2h6l2 2h3v11H4z"/><circle cx="12" cy="13" r="3.1"/></svg>
@@ -394,10 +387,10 @@
           </div>
         </div>
       </div>
-      <img class="footer-rose" src="../assets/footer-rose.png" alt="">
+      <img class="footer-rose" src="../assets/footer-rose.webp" alt="" width="320" height="476" loading="lazy" decoding="async">
       <p class="legal">© 2026. All Rights Reserved.</p>
     </div>
   </footer>
-  <script src="../js/main.js"></script>
+  <script src="../js/main.js" defer></script>
 </body>
 </html>

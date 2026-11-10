@@ -61,6 +61,59 @@
     });
   });
 
+  var revealNodes = document.querySelectorAll([
+    ".hero-copy",
+    ".still",
+    ".explore > .wrap > .ornament",
+    ".explore .subhead",
+    ".explore-book",
+    ".explore-copy",
+    ".format-card",
+    ".about",
+    ".beyond-head",
+    ".link-card",
+    ".soon",
+    ".news-inner",
+    ".footer-grid",
+    ".page-hero .wrap",
+    ".page-grid",
+    ".feature",
+    ".shop-card"
+  ].join(","));
+
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  revealNodes.forEach(function (node) {
+    node.classList.add("reveal");
+    if (node.matches(".format-card, .link-card, .feature, .shop-card")) {
+      var index = Array.prototype.indexOf.call(node.parentElement.children, node);
+      node.style.transitionDelay = Math.min(index, 6) * 80 + "ms";
+    }
+  });
+
+  function showNode(node) {
+    node.classList.add("is-in");
+    node.addEventListener("transitionend", function () {
+      node.style.transitionDelay = "";
+    }, { once: true });
+  }
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    revealNodes.forEach(showNode);
+  } else {
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        showNode(entry.target);
+        revealObserver.unobserve(entry.target);
+      });
+    }, { threshold: 0.16, rootMargin: "0px 0px -40px 0px" });
+
+    revealNodes.forEach(function (node) {
+      revealObserver.observe(node);
+    });
+  }
+
   var params = new URLSearchParams(window.location.search);
   var format = params.get("format");
   var message = document.querySelector("#message");

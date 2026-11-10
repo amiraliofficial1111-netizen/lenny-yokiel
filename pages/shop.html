@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Events & Signings | Lenny Yokiel</title>
+  <title>Shop | Lenny Yokiel</title>
   <meta name="description" content="Lenny Yokiel — Creative Life Expressions. Stories that inspire, uplift and encourage.">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nunito:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
   <header class="site-header">
@@ -27,7 +27,7 @@
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-            <nav class="nav" aria-label="Primary">
+      <nav class="nav" aria-label="Primary">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li class="has-drop">
@@ -53,15 +53,15 @@
             </div>
           </li>
           <li class="has-drop">
-            <a class="pill" href="media.html">Media &amp; Events <i class="chev"></i></a>
+            <a href="media.html">Media &amp; Events <i class="chev"></i></a>
             <div class="drop">
               <ul>
                 <li><a href="youtube.html">YouTube &amp; Podcast</a></li>
-                <li><a href="events.html" aria-current="page">Events &amp; Signings</a></li>
+                <li><a href="events.html">Events &amp; Signings</a></li>
               </ul>
             </div>
           </li>
-          <li><a href="shop.html">Shop</a></li>
+          <li><a class="pill" href="shop.html" aria-current="page">Shop</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -75,19 +75,33 @@
   <main>
   <section class="page-hero">
     <div class="wrap">
-      <p class="eyebrow">Media &amp; Events</p>
-      <h1>Events &amp; Signings</h1>
+      <p class="eyebrow">Explore Shop</p>
+      <h1>Shop &amp; Creations</h1>
     </div>
   </section>
   <section class="page-section">
     <div class="wrap">
-      <article class="feature" style="max-width:520px;margin:0 auto;">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#2d6810" stroke-width="1.7"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3.5v4M16 3.5v4M4 10h16"/></svg>
-        <h2>Events &amp; Signings</h2>
-        <p>Book signings and upcoming events will be listed here.</p>
-        <p>More to come.</p>
-        <a class="btn btn-sm" href="media.html" style="margin-top:16px;">Back to Media &amp; Events</a>
-      </article>
+      <p class="prose" style="text-align:center;max-width:640px;margin:0 auto 28px;">Carrie and the Whisper of the Rose is available in hardcover, paperback, and eBook. Choose a format and connect with Lenny to purchase.</p>
+      <div class="shop-grid">
+        <article class="shop-card" id="hardcover">
+          <div class="mini-book"><div class="book"><span class="book-spine"></span><span class="book-face"><img src="../assets/book-art.jpg" alt=""><span class="book-title"><span class="bt-1">Carrie</span><span class="bt-2">and the Whisper of the</span><span class="bt-3">Rose</span></span><span class="bt-author">Lenny Yokiel</span></span></div></div>
+          <h2>Hardcover</h2>
+          <p>A mother tells her daughter Carrie, the story of a little rose that teaches the importance of being the best person you were purposed to be.</p>
+          <a class="btn" href="contact.html?format=Hardcover">View / Buy</a>
+        </article>
+        <article class="shop-card" id="paperback">
+          <div class="mini-book"><div class="book"><span class="book-spine"></span><span class="book-face"><img src="../assets/book-art.jpg" alt=""><span class="book-title"><span class="bt-1">Carrie</span><span class="bt-2">and the Whisper of the</span><span class="bt-3">Rose</span></span><span class="bt-author">Lenny Yokiel</span></span></div></div>
+          <h2>Paperback</h2>
+          <p>A mother tells her daughter Carrie, the story of a little rose that teaches the importance of being the best person you were purposed to be.</p>
+          <a class="btn" href="contact.html?format=Paperback">View / Buy</a>
+        </article>
+        <article class="shop-card" id="ebook">
+          <div class="tablet" style="width:140px;margin:0 auto 16px;"><div class="book flat"><span class="book-spine"></span><span class="book-face"><img src="../assets/book-art.jpg" alt=""><span class="book-title"><span class="bt-1">Carrie</span><span class="bt-2">and the Whisper of the</span><span class="bt-3">Rose</span></span><span class="bt-author">Lenny Yokiel</span></span></div></div>
+          <h2>eBook</h2>
+          <p>Read Carrie and the Whisper of the Rose on a tablet, phone, or computer.</p>
+          <a class="btn" href="contact.html?format=eBook">View / Buy</a>
+        </article>
+      </div>
     </div>
   </section>
 </main>
@@ -168,10 +182,10 @@
           </div>
         </div>
       </div>
-      <img class="footer-rose" src="assets/footer-rose.png" alt="">
+      <img class="footer-rose" src="../assets/footer-rose.png" alt="">
       <p class="legal">© 2026. All Rights Reserved.</p>
     </div>
   </footer>
-  <script src="js/main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
